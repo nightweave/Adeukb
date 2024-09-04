@@ -62,11 +62,11 @@
             //               | mo2 | alt  | SHF  | DEL  |  BSPC  |  | ENTER | SPACE|       |  0    |      |
 
             bindings = <
-&kp F1     &kp F2    &kp F3    &kp F4     &kp F5           &kp F6                                  &kp F7     &kp F8  &kp F9  &kp F10  &kp F11    &kp F12
-&kp LGUI   &trans    &kp UP    &trans     &rgb_ug RGB_TOG  &rgb_ug RGB_EFF                         &trans     &kp N1  &kp N2  &kp N3   &kp PG_UP  &kp PG_DN
-&kp ESC    &kp LEFT  &kp DOWN  &kp RIGHT  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI                         &trans     &kp N4  &kp N5  &kp N6   &kp HOME   &kp END
-&kp PSCRN  &trans    &trans    &trans     &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &trans      &trans     &trans     &kp N7  &kp N8  &kp N9   &trans     &trans
-                     &mo 2     &kp LALT   &kp LSHFT        &kp DEL          &kp BSPC    &kp ENTER  &kp SPACE  &trans  &kp N0  &trans
+&kp F1     &kp F2    &kp F3    &kp F4     &kp F5     &kp F6                          &kp F7     &kp F8  &kp F9  &kp F10     &kp F11    &kp F12
+&kp LGUI   &trans    &kp UP    &trans     &trans     &trans                          &trans     &kp N1  &kp N2  &kp N3      &kp PG_UP  &kp PG_DN
+&kp ESC    &kp LEFT  &kp DOWN  &kp RIGHT  &trans     &trans                          &trans     &kp N4  &kp N5  &kp N6      &kp HOME   &kp END
+&kp PSCRN  &trans    &trans    &trans     &trans     &trans   &trans      &trans     &trans     &kp N7  &kp N8  &kp N9      &trans     &trans
+                     &mo 2     &kp LALT   &kp LSHFT  &kp DEL  &kp BSPC    &kp ENTER  &kp SPACE  &trans  &kp N0  &kp PERIOD
             >;
 
             sensor-bindings =
@@ -111,6 +111,8 @@
 &none       &none            &none            &none            &none            &none            &rgb_ug RGB_TOG    &none  &none  &none  &none  &none  &none  &none
                              &none            &none            &none            &none            &none              &none  &none  &none  &none  &none
             >;
+
+            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
     };
 };
