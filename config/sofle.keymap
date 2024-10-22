@@ -3,7 +3,6 @@
 //
 // SPDX-License-Identifier: MIT
 //
-
 //               @@   @@@@@@@@@@@@  @@@@@@@@@@@@@@@@           @@@@         
 //             @@@@@@         @@@@@@ @@@@@      @@@@           @@@@         
 //           .@@@@@@@@           @@@@  @@@@     @@@@           @@@@         
@@ -58,11 +57,13 @@
                    &kp LGUI  &kp LALT  &kp LCTRL  &mt LEFT_SHIFT DEL  &kp BACKSPACE    &kp ENTER   &mt RIGHT_SHIFT SPACE  &kp RALT  &kp RCTRL  &mo 2
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp RIGHT LEFT>;
+            sensor-bindings =
+                <&inc_dec_kp UP_ARROW DOWN_ARROW>,
+                <&inc_dec_kp RIGHT LEFT>;
         };
 
         lower_layer {
-            display-name = "lower";
+            display-name = "numpad_layer";
 
             // TODO: Some binds are waiting for shifted keycode support.
             // ------------------------------------------------------------------------------------------------------------
